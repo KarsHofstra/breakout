@@ -8,7 +8,12 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  
+  dx = 3;
+  dy = 3;
+  x = 100;
+  y = 100;
+  t=0 
 }
 
 
@@ -18,9 +23,24 @@ function setup() {
  * uitgevoerd door de p5 library, nadat de setup functie klaar is
  */
 function draw() {
+  background('blue');
+  t= t+0.2
+  if(x<-25 || x>1255)(
+    dx = -dx
+  );
+  if(y<-25 || y>695)(
+    dy = -dy
+  );
+  x = x + dx + 3*sin(t);
+  y = y + dy + 3*cos(t);
+
   // stel vulkleur in
   fill(100, 100, 255);
 
+
   // teken een cirkel
-  ellipse(50,50,80,80);
+  ellipse(x,y,50,50);
+  
+
+  
 }
