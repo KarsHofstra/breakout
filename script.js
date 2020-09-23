@@ -1,3 +1,20 @@
+class Plusje {
+    constructor(Xmid, Ymid) {
+        this.Xmid = Xmid;
+        this.Ymid = Ymid;
+        this.width = 10
+        
+    }
+    show() {
+        fill(127,127,127);
+        line(this.Xmid - this.width, this.Xmid + this.width, this.Ymid, this.Ymid);
+        line(this.Xmid, this.Xmid, this.Ymid - this.width, this.Ymid + this.Width);
+    }
+}
+
+
+
+
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
@@ -23,7 +40,13 @@ function setup() {
  * uitgevoerd door de p5 library, nadat de setup functie klaar is
  */
 function draw() {
-  background('blue');
+  
+  
+  
+  
+  
+  
+ */  background('blue');
   t= t+0.2
   if(x<-25 || x>1255)(
     dx = -dx
